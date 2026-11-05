@@ -1,0 +1,34 @@
+# Arquivos de ambiente e credenciais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+credentials*
+secrets*
+
+# Máquinas virtuais, estados e discos
+*.vdi
+*.vmdk
+*.vbox
+*.vbox-prev
+*.sav
+*.ova
+*.ovf
+Snapshots/
+
+# Arquivos locais e rascunhos de transferência
+Thumbs.db
+Desktop.ini
+.DS_Store
+~$*
+handoff*
+rascunhos/
+private/
+privado/
+auditoria/
+screenshots-originals/
+*.log
+*.log.*

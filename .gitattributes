@@ -1,0 +1,6 @@
+* text=auto
+*.md text eol=lf
+*.png binary
+# Preserve the exact bytes of evidence summaries referenced by SHA256SUMS.
+*.json -text
+SHA256SUMS.txt text eol=lf

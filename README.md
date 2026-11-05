@@ -1,60 +1,57 @@
 # Security Portfolio — Luccas M. Possatti
 
-**8 anos em infraestrutura, suporte técnico e NOC. Migrando para SOC + GRC.**  
-Cada projeto aqui fecha um loop completo: ataque → detecção → investigação → documentação.
+**Infraestrutura e NOC como base para segurança defensiva e gestão de riscos.**
 
----
+Sou profissional de TI com experiência em infraestrutura, suporte N1/N2 e monitoramento NOC. Minha trajetória inclui gestão de incidentes, investigação de causa raiz e observabilidade com Zabbix e Dynatrace, além de contato com ambientes cloud e automação industrial.
 
-## Sobre mim
+Estou direcionando esse repertório para **SOC / Blue Team e GRC**, com estudos práticos que conectam eventos técnicos, evidências e decisões de risco. Meu interesse de longo prazo é segurança **OT/ICS**, aproveitando a experiência com automação.
 
-Profissional de TI com **8 anos de experiência** em infraestrutura, suporte técnico (N1/N2) e monitoramento (NOC), com histórico consolidado em gestão de incidentes e investigação de causa raiz. Experiência com ferramentas de observabilidade (Zabbix, Dynatrace), automação industrial (Siemens TIA Portal, Rockwell), cloud (Azure, AWS) e ambientes críticos de alto volume.
+## Projeto em destaque
 
-Nos últimos meses direcionei o desenvolvimento técnico para **segurança defensiva** — SOC analytics, correlação de eventos, governança de risco e conformidade. Estou construindo essa transição de forma deliberada: labs reproduzíveis, artefatos rastreáveis e documentação que consigo defender em voz alta.
+### [Detecção e investigação de tentativas de senha SSH com Wazuh](01-ssh-bruteforce-wazuh/README.md)
 
-**Trilha atual:** SOC (Blue Team) + GRC (Governança, Risco e Conformidade)  
-**Destino de longo prazo:** Segurança OT/ICS (com background em automação industrial)
+Laboratório com **três máquinas virtuais**, Linux, OpenSSH e Wazuh. O estudo acompanha uma tentativa controlada de adivinhação de senha desde os eventos de autenticação até a correlação no SIEM, a investigação e a análise de riscos.
 
----
+**Resultado demonstrado:** oito falhas SSH correlacionadas pela regra 5763, nível 10. O trabalho reúne investigação de autenticação, reconciliação de alertas e tradução dos achados em riscos e tratamentos propostos.
 
-## Projetos
+**[Explorar o estudo](01-ssh-bruteforce-wazuh/README.md)** · **[Ler a investigação](01-ssh-bruteforce-wazuh/docs/incident-report.md)** · **[Consultar os riscos](01-ssh-bruteforce-wazuh/docs/fase11-grc-risco-controles.md)**
 
-### 01 — Detecção de Brute Force SSH com Wazuh
+| Área | Entrega |
+|---|---|
+| SOC | Investigação com timeline, análise de alertas e limites das conclusões |
+| GRC | Registro de riscos, justificativas e plano de tratamento |
+| Referenciais | Mapeamento analítico para MITRE ATT&CK, NIST CSF 2.0, NIST SP 800-53 Rev. 5 e CIS Controls v8.1 |
+| Evidências | Extratos analíticos anonimizados, índice de fontes e integridade dos documentos públicos |
 
-`SIEM` · `Log Analysis` · `Incident Response` · `GRC`
+**Tecnologias:** Wazuh · Linux · OpenSSH · VirtualBox · Hydra (simulação autorizada).
 
-Lab com duas VMs (Ubuntu Server). Simulação de ataque de força bruta SSH com Hydra, correlação de alertas no Wazuh, investigação do evento e mapeamento de controles contra CIS Controls v8 e NIST CSF.
+Os documentos distinguem observações, interpretações e recomendações. O escopo demonstrado é detecção e investigação; prevenção e contenção ficam como tratamentos propostos. Os limites das fontes estão registrados no relatório.
 
-**Artefatos:** alertas Wazuh (JSON), writeup de investigação, runbook de resposta, mapeamento de risco.
+## Competências colocadas em prática
 
-→ [Ver projeto](./01-ssh-bruteforce-wazuh/)
+| Base de operações | Aplicação no projeto |
+|---|---|
+| Monitoramento e troubleshooting | Verificação de agente, eventos, regras e correlação |
+| Administração Linux e redes | OpenSSH, serviços, endereçamento e alcance das VMs |
+| Gestão de incidentes | Timeline, hipóteses, investigação e comunicação do resultado |
+| Análise de risco | Cenários, premissas, controles e priorização de tratamento |
 
----
+## Cursos e estudos
 
-## Roadmap
+| Situação | Formação complementar |
+|---|---|
+| Concluído | TryHackMe — SOC Level 1 |
+| Concluído | Getting Started with Cybersecurity — IBM SkillsBuild |
+| Concluído | Segurança em TI — Fundação Bradesco |
+| Histórico de formação | Apple Service Mac ACMT (2019) e iOS ACiT (2018) |
+| Em estudo | CompTIA Security+; NIST CSF; fundamentos de segurança OT/ICS e IEC 62443 |
 
-O que está sendo construído ou planejado — visível para mostrar trajetória, não só estado atual.
+O estudo publicado é um projeto pessoal de laboratório. As experiências profissionais, os cursos e a prática de laboratório são apresentados em seus respectivos contextos.
 
-| Status | Projeto | Foco |
-|--------|---------|------|
-| 🔄 Em build | Detecção SSH Brute Force (Wazuh) | SOC + GRC |
-| 🔜 Planejado | Lab híbrido IT/OT — Modbus TCP + Suricata | OT/ICS Detection |
-| 🔜 Planejado | Threat Hunting com Sigma Rules | Detection Engineering |
+## Próximas frentes
 
----
-
-## Certificações & Estudos
-
-| Status | Certificação |
-|--------|-------------|
-| ✅ Concluído | TryHackMe — SOC Level 1 |
-| ✅ Concluído | Getting Started with Cybersecurity — IBM SkillsBuild |
-| ✅ Concluído | Segurança em TI — Fundação Bradesco |
-| ✅ Concluído | Apple Service Mac ACMT (2019) · iOS ACiT (2018) |
-| 🔄 Em andamento | CompTIA Security+ (2026) |
-| 🔄 Em estudo | NIST CSF · IEC 62443 (foco em OT/ICS) |
-
----
+Melhorias de cobertura e resposta no laboratório atual; no longo prazo, estudos de detecção em ambientes IT/OT. Essas frentes são planejamento, não resultados atribuídos a este projeto.
 
 ## Contato
 
-[LinkedIn](https://linkedin.com/in/luccaspossatti) · [Email](mailto:luccas_poss@yahoo.com.br)
+[LinkedIn](https://www.linkedin.com/in/luccaspossatti/) · [GitHub](https://github.com/LuccasMPossatti)
