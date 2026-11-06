@@ -1,6 +1,6 @@
 # Relatório SOC — Falhas SSH correlacionadas pelo Wazuh
 
-**Autor:** Luccas M. Possatti · **Evento:** 10/09/2026 · **Revisão:** 05/11/2026
+**Autor:** Luccas M. Possatti · **Evento:** 10/09/2026 · **Revisão:** 06/11/2026
 
 **[O]** observação direta dos arquivos disponíveis na revisão privada · **[I]** interpretação · **[R]** recomendação. Todos os horários abaixo são UTC, salvo indicação explícita. Esta edição usa rótulos anonimizados; os originais não integram o repositório público.
 
@@ -8,7 +8,7 @@
 
 O alerta 5763 examinado apresenta a composição de oito falhas SSH da origem `ORIGEM-LAB` contra a conta `CONTA-LAB` da VM-02 (`ALVO-LAB`), conforme E35: sete eventos anteriores e a falha atual. O alerta, nível 10, tem timestamp `2026-09-10T20:27:21.468+0000` (E27/E35).
 
-Os trechos de autenticação e sessões examinados não mostram login bem-sucedido correspondente ao evento. Essa conclusão se limita ao conteúdo visível. Não foi feita investigação abrangente de persistência, processos ou integridade do endpoint. O exercício comprovou detecção e análise; não comprovou bloqueio ou contenção.
+Os trechos de autenticação e sessões examinados não mostram login bem-sucedido correspondente ao evento. Essa conclusão se limita ao conteúdo visível. Não foi feita investigação abrangente de persistência, processos ou integridade do endpoint. O cenário foi gerado pelo operador, com senhas declaradas inválidas: o exercício demonstra a cadeia de detecção e análise desse estímulo conhecido, não a descoberta de uma ameaça desconhecida, bloqueio ou contenção.
 
 ## 2. Escopo e ambiente
 
@@ -83,6 +83,8 @@ E07, E21 e as duas imagens chamadas E23 mostram **31/08/2026**. São registros d
 **[O] E24:** o comando filtra a origem em `auth.log` e exibe as últimas vinte linhas correspondentes. O trecho contém falhas e desconexões em 10/09; não contém `Accepted password`. Há também uma linha posterior de `sudo` cujo comando menciona o IP — ela não representa tráfego SSH.
 
 **[O] E28:** as dez primeiras linhas de `last -i` não mostram sessão SSH correspondente ao evento. Há registros de sessões antigas e de reinicialização. O resultado é evidência de apoio, não um inventário completo de sessões ou métodos de acesso.
+
+**Limite temporal da investigação:** E24 usa `tail -n 20` após o filtro textual e E28 usa `head -n 10`; essas seleções não estabelecem um intervalo absoluto de investigação nem demonstram completude. Não há um registro explícito de início/fim de uma busca abrangente ou do instante de captura das duas imagens. A linha de `sudo` em E24 registra uma execução de consulta, não o término comprovado de um período monitorado. Portanto, não se afirma ausência de atividade após a sequência ou até um horário posterior definido.
 
 | Hipótese | Avaliação e limite |
 |---|---|

@@ -1,6 +1,6 @@
 # Revisão técnica e aprendizados
 
-**Data:** 05/11/2026 · **Método:** comparação dos documentos com as imagens disponíveis e consulta a fontes oficiais
+**Revisão:** 06/11/2026 · **Método:** comparação dos documentos com as imagens disponíveis e consulta a fontes oficiais
 
 Esta é uma revisão documental assistida, não uma auditoria independente formal, pentest ou nova execução do laboratório.
 
@@ -18,6 +18,8 @@ Esta é uma revisão documental assistida, não uma auditoria independente forma
 | E32/E20 tratadas como arquivos disponíveis | Ausência explícita; uso de fontes disponíveis | Rastreabilidade sem fabricar evidência |
 | Precisão de microssegundos atribuída a E32 | Timeline em segundos, apoiada em E26/E35/E24 | Precisão deve corresponder à fonte acessível |
 | Ausência de comprometimento afirmada amplamente | Sucesso não observado nos trechos; comprometimento global indeterminado | Evita conclusão maior que o alcance da análise |
+| Recortes de autenticação/sessões tratados como período completo de investigação | Limite explícito: E24/E28 não documentam início/fim absolutos de busca abrangente nem instante de captura | Não inventar uma janela de ausência de atividade |
+| Exercício controlado confundido com descoberta de ameaça desconhecida | Resumo delimita detecção de estímulo conhecido, com senhas declaradas inválidas | Não generalizar uma execução para eficácia contra ataques desconhecidos |
 | Alerta reduzindo numericamente o impacto | Redução não demonstrada retirada | Detecção sozinha não comprova redução de dano |
 | Ausência de índice tratada como ausência de retenção | E31 descrita como ausência de padrão na interface | Distinguir coleta, arquivo, indexação e busca |
 | Host-Only descrito como isolamento absoluto | Host-Only + NAT; host permanece no alcance | Precisão sobre limites da rede |

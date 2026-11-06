@@ -1,6 +1,6 @@
 # Extratos analíticos das evidências
 
-**Edição pública anonimizada — 05/11/2026**
+**Edição pública anonimizada — revisão em 06/11/2026**
 
 As tabelas abaixo foram transcritas e normalizadas a partir dos registros examinados na revisão privada. Não são logs brutos, exports JSON ou screenshots originais. Identificadores foram substituídos por rótulos. Não foram inventados novos eventos para preencher lacunas.
 
@@ -52,6 +52,8 @@ O histórico também contém uma tentativa avulsa anterior e não exibe timestam
 ## E24 e E28 — Investigação
 
 O trecho de autenticação e o recorte de sessões examinados não exibem sucesso correspondente à sequência. As consultas têm limites de recorte. Não sustentam ausência global de comprometimento, persistência ou atividade em outras fontes.
+
+E24 contém as últimas vinte linhas que correspondem ao filtro textual; E28 contém as dez primeiras linhas da consulta de sessões. Não há início/fim absolutos documentados para uma investigação abrangente, nem horário de captura explicitamente registrado nessas imagens. Não se deduz um período completo de ausência de atividade a partir dos horários das linhas exibidas.
 
 ## E29 e E30 — Comparação legítima
 
