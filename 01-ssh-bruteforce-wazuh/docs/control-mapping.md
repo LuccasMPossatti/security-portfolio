@@ -2,6 +2,8 @@
 
 **Revisão de fontes:** 05/11/2026 · **Escopo:** eventos SSH e controles do laboratório
 
+**Revisão de redação e limites:** 06/11/2026.
+
 As associações abaixo são análise do autor, apoiada por fontes oficiais. Não são equivalências oficiais entre frameworks nem declaração de conformidade. **Demonstrado no recorte** significa que uma atividade foi evidenciada; não significa atendimento integral a um controle organizacional.
 
 ## 1. MITRE ATT&CK Enterprise
@@ -14,9 +16,9 @@ Referências consultadas: [T1110 — Brute Force](https://attack.mitre.org/techn
 | T1110 — Brute Force | Mapeamento automático do alerta 5763 | E35, observado nos metadados |
 | T1110.001 — Password Guessing | Mapeamento automático em alertas individuais 5760; comportamento compatível com a sequência registrada | SUP e E34 mostram o ID; E36 apoia a interpretação do método |
 
-A versão anterior dizia que a sub-técnica nunca era declarada pelo SIEM. A revisão distingue os alertas: 5763 traz T1110, enquanto 5760 traz T1110.001. Não se deve generalizar os metadados de um deles ao outro. Nem a classificação identifica o Hydra, nem um ID de acesso remoto comprova movimentação lateral bem-sucedida.
+Os alertas têm metadados distintos: 5763 traz T1110, enquanto 5760 traz T1110.001. Não se deve generalizar os metadados de um deles ao outro. Nem a classificação identifica o Hydra, nem um ID de acesso remoto comprova movimentação lateral bem-sucedida.
 
-Senhas fortes, MFA e políticas de uso de conta são possíveis medidas para discutir; o experimento não as implementou nem mediu sua eficácia. Os antigos IDs DET0463/DET0551 foram retirados do escopo desta publicação porque não são necessários para demonstrar o resultado e não foram validados como uma implementação completa.
+Senhas fortes, MFA e políticas de uso de conta são possíveis medidas para discutir; o experimento não as implementou nem mediu sua eficácia.
 
 ## 2. NIST CSF 2.0
 
@@ -28,7 +30,7 @@ Fonte: [NIST CSWP 29, apêndice A](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.C
 | ID.RA-05 | Risco inerente e priorização | Relacionada ao método GRC; cenário inerente não medido |
 | ID.RA-06 | Tratamento de risco | Plano proposto, sem execução ou acompanhamento demonstrado |
 | PR.AA-03 | Autenticação | Parcial: autenticações aceitas e rejeitadas; política completa não avaliada |
-| PR.IR-01 | Proteção de redes e ambientes | Parcial: topologia restrita documentada; revisão de acesso incompleta |
+| PR.IR-01 | Proteção de redes e ambientes | Relação parcial: topologia descrita, mas limites de entrada na data do incidente não comprovados; proteção integral da rede não demonstrada |
 | DE.CM-03 | Monitoramento de atividade | Demonstrado no recorte SSH |
 | DE.CM-09 | Monitoramento de sistemas e dados | Parcial: eventos SSH; não se afirma cobertura integral do host |
 | DE.AE-02 | Análise de eventos | Demonstrada na investigação |

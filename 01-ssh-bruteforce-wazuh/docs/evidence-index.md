@@ -1,6 +1,6 @@
 # Fontes, privacidade e rastreabilidade
 
-**Revisão:** 05/11/2026 · **Edição pública anonimizada**
+**Revisão:** 06/11/2026 · **Edição pública anonimizada**
 
 O acervo original recebido reúne **85 arquivos: oito documentos Markdown e 77 imagens (8 + 77 = 85)**. A revisão também recebeu novas capturas de verificação operacional, adicionais a esse total original. Os originais foram preservados privadamente. Esta publicação contém apenas extratos analíticos anonimizados e documentos revisados.
 
@@ -38,4 +38,6 @@ Leia os [extratos analíticos](evidence-excerpts.md) e o [relatório SOC](incide
 
 ## Integridade
 
-[SHA256SUMS.txt](../evidence/SHA256SUMS.txt) permite conferir os arquivos textuais desta edição pública. Os hashes dos originais e o inventário com nomes completos ficam no arquivo privado e não são publicados como se fossem prova acessível neste repositório.
+[SHA256SUMS.txt](../evidence/SHA256SUMS.txt) lista exclusivamente os **oito arquivos Markdown de `docs/`**. Não cobre os READMEs da raiz e do caso, nem o próprio manifesto. A comparação detecta divergências em relação aos valores de referência, desde que esse manifesto seja considerado confiável.
+
+O manifesto está no mesmo repositório dos documentos e **não é uma assinatura digital**: uma alteração conjunta dos textos e dos hashes pode manter a verificação consistente. Ele não autentica autoria nem oferece, sozinho, garantia contra adulteração. Os hashes dos originais e o inventário com nomes completos ficam no arquivo privado e não são publicados como se fossem prova acessível neste repositório.

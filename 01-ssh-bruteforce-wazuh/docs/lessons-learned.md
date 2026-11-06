@@ -20,9 +20,13 @@ Esta é uma revisão documental assistida, não uma auditoria independente forma
 | Ausência de comprometimento afirmada amplamente | Sucesso não observado nos trechos; comprometimento global indeterminado | Evita conclusão maior que o alcance da análise |
 | Recortes de autenticação/sessões tratados como período completo de investigação | Limite explícito: E24/E28 não documentam início/fim absolutos de busca abrangente nem instante de captura | Não inventar uma janela de ausência de atividade |
 | Exercício controlado confundido com descoberta de ameaça desconhecida | Resumo delimita detecção de estímulo conhecido, com senhas declaradas inválidas | Não generalizar uma execução para eficácia contra ataques desconhecidos |
-| Alerta reduzindo numericamente o impacto | Redução não demonstrada retirada | Detecção sozinha não comprova redução de dano |
+| Alerta reduzindo numericamente o impacto | Redução de R1b de 16 para 12 retirada por falta de demonstração | Detecção sozinha não comprova redução de dano |
 | Ausência de índice tratada como ausência de retenção | E31 descrita como ausência de padrão na interface | Distinguir coleta, arquivo, indexação e busca |
 | Host-Only descrito como isolamento absoluto | Host-Only + NAT; host permanece no alcance | Precisão sobre limites da rede |
+| Topologia restrita tratada como premissa comprovada de R1a | P=2 explicitamente condicional ao alcance de entrada; ausência de encaminhamento nas configurações salvas não prova o estado histórico | Separar configuração posterior, alcance efetivo e hipótese de risco |
+| Referências DET0463/DET0551 sem validação de implementação completa | Retiradas do mapeamento do caso | Não ampliar os resultados além do que foi analisado |
+| Histórico de correções repetido nos documentos principais | Retrospectiva concentrada neste documento; SOC/GRC/mapeamentos descrevem o estado atual da análise | Facilitar a leitura sem perder rastreabilidade |
+| Hashes descritos como cobertura de todos os textos públicos | Escopo limitado aos oito Markdown de docs/; manifesto sem assinatura, mantido no mesmo repositório | Distinguir comparação de conteúdo de autenticação e proteção contra troca conjunta |
 | E33 usada como prova de soft lockup | Conteúdo incompatível registrado; causa permanece não comprovada | Não confiar apenas no nome da imagem |
 
 ## 2. O que o projeto demonstra

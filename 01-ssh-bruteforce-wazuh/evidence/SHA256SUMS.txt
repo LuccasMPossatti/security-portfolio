@@ -1,10 +1,10 @@
 # SHA-256 of public anonymized documents; not hashes of private source evidence.
 # Paths relative to 01-ssh-bruteforce-wazuh/.
-5ab5f786dbac4398166414b849db064ce078b1e23dd60866c1140e66c9dc4356  docs/control-mapping.md
+13d3c7c7468e4643419cdb7fc82e07de2a9cb606e35676f8851af9da7c614eae  docs/control-mapping.md
 9f448917c6860aef860792ca51446e931b5f037472085bf0ffe4c939691813ec  docs/evidence-excerpts.md
-fb585016a7973f9f041ecec25274a31c47066bd2275c49416ce8c880d6efafd3  docs/evidence-index.md
-12d66aaec4e08b5328ce05eb0951cdacf4b1f0f1710c9885389cad92d8ff3252  docs/fase11-grc-risco-controles.md
+b8c29f41af61edd201a751672b3defec17f042849f8167cbb2095e0bac26d9b6  docs/evidence-index.md
+fcf04c69368d459a5f2da6decb6803c6de71ab93dfbb5f5e3ed1f6a71c236e14  docs/fase11-grc-risco-controles.md
 26d770cd602723bc5aeed505d9be9d8027b099222f72ff9a760d03ba42854254  docs/incident-report.md
-1058c58d4fa714c3c11fb8a485ec3dbef28e6c1154ba35dea104d45226566641  docs/lessons-learned.md
+cea09966a267bb8498966d45dbdda617ad4c9a4014ad5e73107017e07e941f2b  docs/lessons-learned.md
 abfceecf327b0a992d0dd2a517af91d7bc98eb84d1830c1f7c06406f0adc256f  docs/reproduction.md
 13dfb6c5f06dc8c9fd5d82dc36669c36eec83b36d74d04dbc7770ad739e05adc  docs/security-hygiene.md

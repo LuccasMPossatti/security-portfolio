@@ -1,6 +1,6 @@
 # GRC — Riscos, controles e tratamento
 
-**Autor:** Luccas M. Possatti · **Revisão:** 05/11/2026 · **Escopo:** laboratório SSH/Wazuh
+**Autor:** Luccas M. Possatti · **Revisão:** 06/11/2026 · **Escopo:** laboratório SSH/Wazuh
 
 **[O]** observado · **[I]** análise · **[R]** proposta ainda não implementada. As classificações são julgamentos didáticos, não estimativas estatísticas ou decisões formais de aceitação de risco.
 
@@ -8,7 +8,7 @@
 
 O estudo avalia o acesso SSH à VM-02 e a visibilidade do Wazuh na VM-03. Inclui a conta de laboratório, os eventos de autenticação e a disponibilidade da coleta. Não há dados corporativos, valores de perda ou métricas de exposição de produção no escopo.
 
-A rede do exercício foi documentada como Host-Only. A inspeção posterior das configurações salvas encontrou também NAT nas três VMs. Host-Only inclui o host e outras VMs conectadas; não significa isolamento absoluto. A configuração atual não comprova a configuração exata na data do incidente.
+A rede do exercício foi documentada como Host-Only. A inspeção posterior das configurações salvas encontrou também NAT nas três VMs; a conferência dessas configurações em 06/11/2026 não encontrou regras de encaminhamento de portas nos adaptadores NAT examinados. Isso não comprova a configuração de 10/09/2026 nem o alcance completo por outros caminhos de rede. Host-Only inclui o host e outras VMs conectadas, e NAT permite comunicação de saída; portanto, o ambiente não deve ser descrito como isolado. A premissa de entrada restrita de R1a é condicional, conforme a seção 4.
 
 ## 2. Controles e limites da evidência
 
@@ -50,7 +50,7 @@ Faixas: **1–4 Baixo; 5–9 Médio; 10–16 Alto; 17–25 Crítico**. Valores o
 
 | ID | Evento e consequência | P × I | Avaliação contextual [I] | Premissas e incertezas |
 |---|---|---|---|---|
-| R1a | Credencial adivinhada e acesso SSH indevido à VM-02 no laboratório | 2 × 3 = **6 Médio** | Nota de trabalho, condicional | Exposição limitada à rede do laboratório; sem dados de valor empresarial. Robustez da senha e privilégios efetivos desconhecidos. A nota não decorre das oito falhas. |
+| R1a | Credencial adivinhada e acesso SSH indevido à VM-02 no laboratório | 2 × 3 = **6 Médio** | Nota de trabalho, condicional | Assume entrada SSH limitada ao host e às VMs autorizadas, sem encaminhamento ou roteamento a partir de rede não confiável; essa premissa não foi validada retrospectivamente. Não exclui saída via NAT nem equivale a isolamento. Sem dados de valor empresarial; robustez da senha e privilégios efetivos desconhecidos. P=2 depende dessas premissas, não das oito falhas. |
 | R1b | Mesmo evento em servidor hipotético exposto a rede não confiável | 4 × 4 = **16 Alto** | Cenário hipotético para priorização | Assume senha suscetível, serviço alcançável e acesso a ativos relevantes. Exposição não foi observada neste laboratório. Sem essas premissas, a nota precisa ser refeita. |
 | R2 | Tentativas lentas ou distribuídas não geram a correlação esperada, atrasando a triagem | 3 × 2 = **6 Médio** | Hipótese de cobertura | Não houve teste fora da sequência observada. Falhas individuais ainda podem gerar alertas; não é perda total de visibilidade. |
 | R3 | Indisponibilidade da coleta ou retenção insuficiente prejudica uma investigação | 3 × 2 = **6 Médio** | Cenário de continuidade | Histórico relata travamentos; perda real não foi medida. Ausência do padrão archives não prova ausência de retenção. |
@@ -61,9 +61,9 @@ P3 em R2/R3 representa uma hipótese conservadora para discussão, não a frequ�
 
 ## 5. Inerente, atual e residual
 
-Um risco inerente exige um cenário de referência sem os controles selecionados. Esse cenário não foi executado; a topologia restrita já é parte do contexto atual. Portanto, não se apresenta um valor inerente como se tivesse sido medido.
+Um risco inerente exige um cenário de referência sem os controles selecionados. Esse cenário não foi executado; o contexto já inclui redes virtuais e controles existentes, com alcance histórico não validado integralmente. Portanto, não se apresenta um valor inerente como se tivesse sido medido.
 
-As notas da seção 4 são **avaliações contextuais atuais**, antes dos tratamentos propostos. Detecção pode apoiar uma resposta, mas não foi medido tempo de resposta nem houve exercício de contenção. Não há base para reduzir o impacto de 4 para 3 somente porque um alerta existe. A redução anterior de R1b de 16 para 12 foi retirada.
+As notas da seção 4 são **avaliações contextuais atuais**, antes dos tratamentos propostos. Detecção pode apoiar uma resposta, mas não foi medido tempo de resposta nem houve exercício de contenção. Não há base para reduzir o impacto de 4 para 3 somente porque um alerta existe.
 
 Nenhuma redução numérica de risco residual é declarada alcançada. Após tratamento e teste, as notas deverão ser reavaliadas com as mesmas premissas e escalas.
 
