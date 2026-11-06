@@ -6,7 +6,7 @@ Um exercício de segurança defensiva que conecta infraestrutura, análise de lo
 
 ## Resultado
 
-Em **10/09/2026**, oito falhas SSH da mesma origem foram correlacionadas pela **regra 5763, nível 10**. A sequência visível vai de **20:26:57 a 20:27:20 UTC**, aproximadamente 23 segundos. O alerta tem timestamp **20:27:21.468 UTC**.
+O alerta histórico de **10/09/2026**, **regra 5763, nível 10**, apresenta a composição de oito falhas SSH da mesma origem: sete eventos anteriores e o evento atual, conforme E35. A sequência visível vai de **20:26:57 a 20:27:20 UTC**, aproximadamente 23 segundos. Os sete primeiros horários são reconstituídos do `previous_output` em E26/E35; o último também aparece em E24. O alerta tem timestamp **20:27:21.468 UTC**.
 
 Não foi observado login bem-sucedido nos trechos analisados do evento. O experimento usou senhas deliberadamente inválidas e não testou prevenção, bloqueio automático ou resistência da senha real. A investigação não constitui uma comprovação abrangente de ausência de comprometimento.
 
@@ -36,11 +36,15 @@ O exercício usou uma rede virtual de laboratório. Os nomes ORIGEM-LAB, ALVO-LA
 
 ## Como a investigação foi conduzida
 
+**Janela A e Janela B são rótulos de cenários, não uma ordem temporal.** O evento de 10/09 antecede a comparação de 27/09.
+
 1. Comparação com autenticações legítimas na Janela A, coletada em **27/09/2026**. Apesar do nome, essa janela foi registrada depois do ataque.
 2. Análise da sequência de falhas SSH da Janela B, em **10/09/2026**.
 3. Reconciliação de eventos individuais 5760 com o alerta de correlação 5763.
 4. Conferência de logs de autenticação e histórico de sessões `last -i`.
 5. Registro de limitações, riscos e tratamentos propostos.
+
+E36 registra uma sequência de oito comandos Hydra e uma tentativa avulsa anterior. O histórico não contém timestamps; a tentativa avulsa não foi somada ao evento, e o vínculo dos comandos com a Janela B depende do contexto documentado, não de uma identificação da ferramenta pelos logs SSH.
 
 ## O que cada regra representa
 

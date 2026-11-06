@@ -6,7 +6,7 @@
 
 ## 1. Resumo executivo
 
-O Wazuh correlacionou oito falhas SSH da origem `ORIGEM-LAB` contra a conta `CONTA-LAB` da VM-02 (`ALVO-LAB`). O alerta 5763, nível 10, tem timestamp `2026-09-10T20:27:21.468+0000` (E27/E35). A sequência contém sete eventos anteriores e a falha atual.
+O alerta 5763 examinado apresenta a composição de oito falhas SSH da origem `ORIGEM-LAB` contra a conta `CONTA-LAB` da VM-02 (`ALVO-LAB`), conforme E35: sete eventos anteriores e a falha atual. O alerta, nível 10, tem timestamp `2026-09-10T20:27:21.468+0000` (E27/E35).
 
 Os trechos de autenticação e sessões examinados não mostram login bem-sucedido correspondente ao evento. Essa conclusão se limita ao conteúdo visível. Não foi feita investigação abrangente de persistência, processos ou integridade do endpoint. O exercício comprovou detecção e análise; não comprovou bloqueio ou contenção.
 
@@ -18,7 +18,7 @@ Os trechos de autenticação e sessões examinados não mostram login bem-sucedi
 | VM-02 | ALVO-LAB | Alvo OpenSSH e Wazuh Agent |
 | VM-03 | SIEM-LAB | Wazuh Manager, Indexer e Dashboard |
 
-E05-13 do agente confirma versão 4.14.7 e estado Active no registro de implantação. Não é uma medição contínua da disponibilidade. A versão do conjunto Wazuh foi registrada como 4.14.7 no histórico; não há exportação de inventário completo dos componentes no pacote.
+E05-13 confirma a versão **4.14.7 do agente** e seu estado Active no registro de implantação; não é uma medição contínua da disponibilidade. O histórico descreve o conjunto Wazuh como 4.14.7, mas **as versões do Manager, Indexer e Dashboard não foram confirmadas individualmente**: não há inventário completo desses componentes no pacote. A consulta ao ruleset oficial 4.14.7 é uma referência de definição das regras, não uma comprovação das versões instaladas ou da ausência de alterações locais.
 
 Os alertas de E35 e SUP indicam `location: journald`. `auth.log` e a coleta Wazuh refletem eventos do mesmo serviço SSH. `last -i` consulta registros `wtmp`, uma fonte de sessões distinta, ainda no mesmo endpoint e sujeita às suas limitações.
 
@@ -98,11 +98,12 @@ E07, E21 e as duas imagens chamadas E23 mostram **31/08/2026**. São registros d
 |---|---|---|
 | Oito falhas SSH correlacionadas | E35, E26 e E24 | Alta para o conteúdo visível |
 | Regra 5763 / nível 10 | E35 e E27 | Alta |
-| Hydra registrado como método do operador | E36 e contexto documentado | Alta para os comandos; sem timestamp no histórico |
+| Comandos Hydra presentes no histórico do operador | E36 | Alta para o conteúdo visível; sem timestamp no histórico |
+| Associação dos comandos Hydra à Janela B | Contexto operacional documentado e compatibilidade com a sequência | Moderada; vínculo temporal não estabelecido pelo histórico de comandos, e logs SSH não identificam a ferramenta |
 | Nenhum sucesso exibido na janela do evento | E24 e E28 | Moderada, limitada ao recorte |
 | Ausência global de comprometimento | Fontes insuficientes para essa conclusão | Não determinada |
 
-**Conclusão pública:** o Wazuh detectou e correlacionou oito falhas SSH em um exercício controlado. Não foi observado acesso bem-sucedido nos trechos analisados. O teste não demonstrou prevenção, contenção, ausência global de comprometimento ou resistência da senha real.
+**Conclusão pública:** o alerta 5763 examinado apresenta oito falhas SSH correlacionadas no exercício controlado, conforme a composição de E35. Não foi observado acesso bem-sucedido nos trechos analisados. O teste não demonstrou prevenção, contenção, ausência global de comprometimento ou resistência da senha real.
 
 ## 9. Limitações e encaminhamentos
 

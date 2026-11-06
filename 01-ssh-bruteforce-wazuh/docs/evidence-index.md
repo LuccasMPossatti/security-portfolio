@@ -2,7 +2,7 @@
 
 **Revisão:** 05/11/2026 · **Edição pública anonimizada**
 
-O acervo original recebido reúne oito documentos Markdown e 77 imagens. A revisão também recebeu novas capturas de verificação operacional. Os originais foram preservados privadamente. Esta publicação contém apenas extratos analíticos anonimizados e documentos revisados.
+O acervo original recebido reúne **85 arquivos: oito documentos Markdown e 77 imagens (8 + 77 = 85)**. A revisão também recebeu novas capturas de verificação operacional, adicionais a esse total original. Os originais foram preservados privadamente. Esta publicação contém apenas extratos analíticos anonimizados e documentos revisados.
 
 ## O que foi preservado nos extratos
 
